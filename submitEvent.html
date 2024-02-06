@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <form>
+      <input class="user_text" type="text" placeholder="내용입력" />
+      <button>버튼</button>
+
+      <h3>입력한 내용: <span>아직없음</span></h3>
+    </form>
+
+    <script>
+      const formEl = document.querySelector("form");
+      const spanEl = document.querySelector("span");
+
+      const submitHandler = (e) => {
+        e.preventDefault();
+
+        const inputValue = inputEl.value;
+
+        spanEl.innerText = inputValue;
+      };
+
+      formEl.addEventListener("submit", submitHandler);
+    </script>
+  </body>
+</html>

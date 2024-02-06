@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/signup.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign up</a>
+      </header>
+
+      <form>
+        <h3>SIGN UP</h3>
+        <input class="username" type="text" placeholder="아이디" />
+        <input class="emial" type="text" placeholder="이름" />
+        <input class="emial" type="email" placeholder="이메일" />
+        <input class="password" type="password" placeholder="패스워드" />
+        <span class="error_message"></span>
+        <button>회원가입</button>
+
+        <div class="seper_wrap">
+          <div class="seper"></div>
+          <span class="or">OR</span>
+          <div class="seper"></div>
+        </div>
+
+        <p>이미 아이디가 있으신가요? <a href="login.html">로그인</a></p>
+      </form>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

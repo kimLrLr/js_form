@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button</title>
+  </head>
+  <body>
+    <!-- 1. button태그
+    2. input태그의 type속성인 submit
+    2. input태그의 type속성인 button -->
+
+    <input class="plus" type="button" value="+" />
+    <span>0</span>
+    <input class="minus" type="button" value="-" />
+
+    <script>
+      const plusEl = document.querySelector(".plus");
+      const minusEl = document.querySelector(".minus");
+      const spanEl = document.querySelector("span");
+
+      let num = 0;
+
+      // *문제
+      // => 증가는 10이상 못함
+      // => 감소는 0이하 못함
+
+      // --------------------- 아래 내가 푼 것
+
+      // const plusHandler = () => {
+      //     if (num < 10){
+      //         spanEl.innerText = ++num;
+      //     } else if (num = 9){
+      //         alert("선택 가능한 수량은 10개입니다.");
+      //     }
+      // };
+
+      // const minusHandler = () => {
+      //     if (num > 0){
+      //         spanEl.innerText = --num;
+      //     } else if (num = 1){
+      //         alert("0 이하로 선택하실 수 없습니다.")
+      //     }
+      // };
+
+      // ------------------------아래는 풀이
+
+      const plusHandler = () => {
+        if (num >= 10) {
+          alert("더 이상 증가할 수 없습니다");
+          return;
+        }
+        spanEl.innerText = num += 1;
+      };
+
+      const minusHandler = () => {
+        if (num <= 0) return;
+        // 값이 하나인 경우에는 중괄호{}없이 위처럼 사용가능
+        spanEl.innerText = num -= 1;
+      };
+
+      plusEl.addEventListener("click", plusHandler);
+      minusEl.addEventListener("click", minusHandler);
+    </script>
+  </body>
+</html>
